@@ -6,7 +6,8 @@ use peg::str::LineCol;
 #[derive(Debug, PartialEq)]
 pub struct M3UEntry {
     pub title: String,
-    pub url: String,
+    pub duration: String,
+    pub path: String,
 }
 
 peg::parser! {
@@ -15,8 +16,8 @@ peg::parser! {
             = entries:line()* { entries }
 
         rule line() -> M3UEntry
-            = _ "#EXTINF:" duration:digits() "," title:$(!"\n" [_]*) "\n" url:$(!"\n" [_]*) "\n" {
-                M3UEntry { title: title.into(), url: url.into() }
+            = _ "#EXTINF:" duration:digits() "," title:$(!"\n" [_]*) "\n" path:$(!"\n" [_]*) "\n" {
+                M3UEntry { title: title.into(), duration: duration, path: path.into() }
             }
 
         rule digits() -> String
