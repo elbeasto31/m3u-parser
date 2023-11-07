@@ -3,7 +3,7 @@ name = "parser_zv"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
-description = "A Rust CLI application for parsing M3U playlists and extracting entry titles and URLs."
+description = "A Rust CLI application for parsing M3U playlists and extracting entry titles and URLs"
 
 [dependencies]
 peg = "0.8.2"

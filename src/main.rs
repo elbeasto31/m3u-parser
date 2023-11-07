@@ -6,10 +6,10 @@ use peg::str::LineCol;
 use parser_zv::parse_m3u;
 
 pub fn main() -> Result<(), ParseError<LineCol>> {
-  let matches = App::new("File Printer")
+  let matches = App::new("M3U CLI Parser")
       .version("1.0")
-      .author("Your Name")
-      .about("Prints the contents of a file to the console")
+      .author("Bohdan Zveriok")
+      .about("A Rust CLI application for parsing M3U playlists and extracting entry titles and URLs")
       .arg(Arg::with_name("file")
           .help("The path to the file to print")
           .required(true)
