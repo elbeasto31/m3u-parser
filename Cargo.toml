@@ -3,9 +3,8 @@ name = "parser_zv"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
-description = "parser for a university project"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "A Rust CLI application for parsing M3U playlists and extracting entry titles and URLs."
 
 [dependencies]
 peg = "0.8.2"
+clap = "2.33"

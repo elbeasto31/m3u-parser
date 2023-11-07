@@ -1,5 +1,4 @@
-
-# Rust Parser
+# Rust M3U Parser
 
 
 ## Table of Contents
@@ -8,11 +7,12 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Examples](#examples)
+- [License](#license)
 - [Contributing](#contributing)
 
 ## Description
 
-This Rust parser is a part of my university project, designed to parse something
+M3U Parser CLI is a Rust command-line application that parses M3U playlists and extracts valuable information from them. It is designed for users who need to work with M3U playlists, whether for media playback, playlist management, or other purposes.
 
 ## Installation
 
@@ -24,16 +24,14 @@ $ cargo build`
 
 ## Usage
 
-`$ cargo run --input input_file.txt` 
+To use the M3U Parser CLI, you can install it and run it from your command line. You can specify the path to the M3U file you want to parse as a command-line argument. The parsed results will be displayed in the console.
 
 ## Examples
 
+`cargo run input_file.m3u`
 
-**Example 1: Basic Usage**
-
-`$ cargo run --input input.txt --output output.txt` 
-
-![image](https://github.com/elbeasto31/rust_parser/assets/82145632/af667ea2-3ebb-49db-82a1-73b65785ebb7)
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Contributing
 
