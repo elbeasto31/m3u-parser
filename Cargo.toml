@@ -1,10 +1,18 @@
 [package]
-name = "parser_zv"
+name = "m3u_cli_parser"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
+authors = ["Bohdan Zveriok"]
 description = "A Rust CLI application for parsing M3U playlists and extracting entry titles and URLs"
+long_description = """M3U Parser CLI is a Rust command-line application that parses M3U playlists,
+extracts valuable information such as entry titles and URLs, and provides the parsed
+results for further use. It is designed for users who need to work with M3U playlists,
+whether for media playback, playlist management, or other purposes.
+"""
 
 [dependencies]
 peg = "0.8.2"
 clap = "2.33"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = [] }

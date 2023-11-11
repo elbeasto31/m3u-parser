@@ -1,6 +1,6 @@
 extern crate peg;
-use parser_zv::parse_m3u;
-use parser_zv::M3UEntry;
+use m3u_cli_parser::parse_m3u;
+use m3u_cli_parser::M3UEntry;
 
 #[test]
 fn test_parse_m3u_with_valid_input() {
@@ -10,7 +10,7 @@ fn test_parse_m3u_with_valid_input() {
         result,
         Ok(vec![M3UEntry {
             title: "Sample Song".to_string(),
-            duration: "22".to_string(),
+            duration: "00:22".to_string(),
             path: "http://example.com/sample.mp3".to_string()
         }])
     );
@@ -32,12 +32,12 @@ fn test_parse_m3u_with_multiple_entries() {
         Ok(vec![
             M3UEntry {
                 title: "Sample1".to_string(),
-                duration: "31".to_string(),
+                duration: "00:31".to_string(),
                 path: "http://example.com/sample1.mp3".to_string()
             },
             M3UEntry {
                 title: "Sample2".to_string(),
-                duration: "2".to_string(),
+                duration: "00:02".to_string(),
                 path: "http://example.com/sample2.mp3".to_string()
             }
         ])
@@ -52,7 +52,7 @@ fn test_parse_m3u_with_whitespace() {
         result,
         Ok(vec![M3UEntry {
             title: " Sample Song  ".to_string(),
-            duration: "0".to_string(),
+            duration: "00:00".to_string(),
             path: "  http://example.com/sample.mp3  ".to_string()
         }])
     );
