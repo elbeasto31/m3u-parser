@@ -1,5 +1,4 @@
-# Rust M3U Parser
-
+# M3U CLI Parser
 
 ## Table of Contents
 
@@ -78,3 +77,5 @@ If you'd like to contribute to this project, please follow these guidelines:
 2.  Create a new branch for your feature or bug fix.
 3.  Make your changes and test them thoroughly.
 4.  Submit a pull request with a clear description of the changes.
+
+#### Crates.io URL: https://crates.io/crates/m3u_cli_parser
